@@ -1,12 +1,12 @@
 import React, { useState } from 'react';
-import './App.css';
-import Modal from './Modal';
+import "./App.css";
+import Modal  from "./Modal"
 
 const App = () => {
     const [modalContent, setModalContent] = useState(null);
 
     const apps = [
-        { id: 'app1', title: 'BUSINESS INTELLIGENCE', description: 'Descripción de la aplicación 1.', images: [{ src: 'src/assets/Imagenes/SAPAC.png', link: 'https://sempertex.br10.hcs.cloud.sap/approuter' }, { src: 'https://via.placeholder.com/100', link: 'https://www.facebook.com' }, { src: 'https://via.placeholder.com/100', link: 'https://www.twitter.com' }] },
+        { id: 'app1', title: 'BUSINESS INTELLIGENCE', description: 'Descripción de la aplicación 1.', images: [{ src: 'src/assets/Imagenes/SAPAC.png', link: 'https://sempertex.br10.hcs.cloud.sap/approuter', Text:"Prueba"}, { src: 'https://via.placeholder.com/100', link: 'https://www.facebook.com' }, { src: 'https://via.placeholder.com/100', link: 'https://www.twitter.com' }] },
         { id: 'app2', title: 'COMERCIAL - SIPO', description: 'Descripción de la aplicación 2.', images: [{ src: 'https://via.placeholder.com/100', link: 'https://www.instagram.com' }, { src: 'https://via.placeholder.com/100', link: 'https://www.youtube.com' }, { src: 'https://via.placeholder.com/100', link: 'https://www.spotify.com' }] },
         { id: 'app3', title: 'AUTOSERVICIO', description: 'Descripción de la aplicación 3.', images: [{ src: 'https://via.placeholder.com/100', link: 'https://www.amazon.com' }, { src: 'https://via.placeholder.com/100', link: 'https://www.linkedin.com' }, { src: 'https://via.placeholder.com/100', link: 'https://www.google.com/calendar' }] },
         { id: 'app4', title: 'MARKETING Y EDUCACION', description: 'Descripción de la aplicación 4.', images: [{ src: 'https://via.placeholder.com/100', link: 'https://www.netflix.com' }, { src: 'https://via.placeholder.com/100', link: 'https://www.reddit.com' }, { src: 'https://via.placeholder.com/100', link: 'https://www.twitch.tv' }] },
