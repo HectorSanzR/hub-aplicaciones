@@ -28,7 +28,7 @@ const App = () => {
             <header>
                 <h1>Hub de Aplicaciones</h1>
             </header>
-            <div className="nav-container">
+            <div className="nav-container ">
                 {apps.map(app => (
                     <a key={app.id} href="#" onClick={() => openModal(app)}>{app.title}</a>
                 ))}
