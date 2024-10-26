@@ -1,6 +1,41 @@
-import React, { useState } from 'react';
+import React, { useState,useEffect } from 'react';
 import "./App.css";
 import Modal  from "./Modal"
+// import React, { useState, useEffect } from 'react';
+import ScrollButtons from './assets/Components/ScrollButton';
+
+
+// const ScrollButtons = () => {
+//     const [showScrollTop, setShowScrollTop] = useState(false);
+  
+//     const handleScroll = () => {
+//       if (window.scrollY > 300) {
+//         setShowScrollTop(true);
+//       } else {
+//         setShowScrollTop(false);
+//       }
+//     };
+  
+//     useEffect(() => {
+//       window.addEventListener('scroll', handleScroll);
+//       return () => window.removeEventListener('scroll', handleScroll);
+//     }, []);
+  
+//     const scrollToBottom = () => {
+//       window.scrollTo({ top: document.documentElement.scrollHeight, behavior: 'smooth' });
+//     };
+  
+//     const scrollToTop = () => {
+//       window.scrollTo({ top: 0, behavior: 'smooth' });
+//     };
+  
+//     return (
+//       <div>
+//         <button onClick={scrollToBottom}>Bajar</button>
+//         {showScrollTop && <button onClick={scrollToTop}>Subir</button>}
+//       </div>
+//     );
+//   };
 
 const App = () => {
     const [modalContent, setModalContent] = useState(null);
@@ -25,6 +60,7 @@ const App = () => {
 
     return (
         <div>
+            
             <header>
                 <h1>Hub de Aplicaciones</h1>
             </header>
@@ -47,8 +83,10 @@ const App = () => {
                         </div>
                     </div>
                 ))}
+               
             </div>
             {modalContent && <Modal app={modalContent} closeModal={closeModal} />}
+            <ScrollButtons />
         </div>
     );
 };
